@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" href="../public/img/IconcreditPro.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#000000" />
+    <meta name="description" content="Aplicación web para administrar finanzas personales" />
+    <link href="../public/css/dataUpdate.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <link href="../public/css/globals.css" rel="stylesheet" type="text/css">
+    <link href="../public/css/notifications.css" rel="stylesheet" type="text/css">
+    <script src="../public/js/kit.fontawesome.js" crossorigin="anonymous"></script>
+    <title>CreditPro</title>
+</head>
+
+<body id="dataUpdate">
+
+    <header id="headerCreditPro">
+        <a href="./dataUpdate.html" id="profile">
+            <!-- <div id=""> -->
+            <img src="../public/img/mujer.png" alt="Profile"
+                style="width: 3em; border-radius: 50%;">
+            <!-- </div> -->
+            <span id="contentText">
+                <strong>Juliana Gómez</strong>
+            </span>
+        </a>
+        <a href="../index.html" id="exitSession"><i class="fa-solid fa-arrow-right-to-bracket"></i></a>
+    </header>
+
+    <main>
+
+        <section id="includeForm">
+
+            <h1>Actualización de Datos</h1>
+            <p> Ingrese los datos que requiere modificar </p>
+
+            <form action="#" method="POST">
+
+                <div class="group group-2">
+                    <label for="fullName" id="labelFullName">
+                        Nombre completo <span style="color:red;">*</span>
+                        <br />
+                        <input type="text" name="fullName" id="fullName" value="" required>
+                    </label>
+
+                    <label for="email" id="labelEmail" class="inputGroup">
+                        Correo electrónico <span style="color:red;">*</span>
+                        <br />
+                        <input type="email" name="email" id="email" disabled value="" required>
+                        <i class="fa-regular fa-envelope"></i>
+                    </label>
+                </div>
+
+                <div class="group group-3">
+                    <label for="phoneNumber" id="labelPhoneNumber" class="inputGroup">
+                        Numero de telefono <span style="color:red;">*</span>
+                        <br />
+                        <input type="number" name="phoneNumber" id="phoneNumber" value="" required>
+                        <i class="fa-solid fa-hashtag"></i>
+                    </label>
+
+                    <label for="nickName" id="labelNickName" class="inputGroup">
+                        Apodo
+                        <br />
+                        <input type="text" name="nickName" id="nickName" value="" required>
+                        <i class="fa-regular fa-user"></i>
+                    </label>
+
+                    <label for="gender" id="labelGender">
+                        Genero
+                        <br />
+                        <select name="gender" id="gender">
+                            <option></option>
+                            <option value="M">Masculino</option>
+                            <option value="F">Femenino</option>
+                            <option value="O">Otro</option>
+                        </select>
+                        <!--<input type="text" name="fullName" id="fullName" required>-->
+                    </label>
+
+                </div>
+
+
+                <div id="content-Buttons">
+                    <button type="submit" id="sendForm">Actualizar</button>
+                    <button type="button" id="backData" onclick="redirect('./views/home.html')">Cancelar</button>
+                </div>
+
+                <p>¿Desea cambiar la contraseña? <a href="./changePassword.html">Cambiar Contraseña</a></p>
+                <p>¿Desea eliminar la cuenta? <a href="./deleteAccount.html">ir a eliminar</a></p>
+            </form>
+        </section>
+
+        <footer id="footerCreditPro">
+            <ul>
+                <li id="footer_contacts" title="Contactos"><a href="./contact.html"> <i
+                            class="fa-solid fa-user-group"></i>
+                        <br />
+                        <!--<span>Contactos</span>-->
+                    </a></li>
+                <li id="footer_history" title="Historico"><a href="./movements.html"> <i
+                            class="fa-solid fa-clock-rotate-left"></i> <br />
+                        <!--<span>Historico</span>-->
+                    </a></li>
+                <li id="footer_home" title="Home"><a href="./home.html"> <i class="fa-solid fa-house"></i> <br />
+                        <!--<span>Home</span>-->
+                    </a></li>
+                <li id="footer_add" title="Agregar"><a href="./debts.html"> <i class="fa-solid fa-coins"></i>
+                        <br />
+                        <!-- <i class="fa-solid fa-plus"></i> <span> Agregar </span>-->
+                    </a></li>
+                <li id="footer_overdue" title="Vencidas"><a href="./overdueAccount.html"> <i
+                            class="fa-regular fa-calendar-minus"></i> <br />
+                        <!--<span>Vencidas</span>-->
+                    </a></li>
+                <!--
+                          <ul id="footer_setting" title="Configuración"><a href="#"> <i class="fa-solid fa-sliders"></i> <br />
+                              <span>Configuración</span>
+                            </a></ul>
+                            -->
+            </ul>
+        </footer>
+</body>
+
+<script src="../public/js/scripts.js" type="text/javascript"></script>
+
+</html>

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" href="public/img/IconcreditPro.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#000000" />
+    <meta name="description" content="Aplicación web para administrar finanzas" />
+
+    <!-- <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" /> -->
+
+    <!-- <link rel="manifest" href="%PUBLIC_URL%/manifest.json" /> -->
+
+    <link href="public/css/login.css" rel="stylesheet" type="text/css">
+
+
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <link href="public/css/globals.css" rel="stylesheet" type="text/css">
+    <link href="public/css/notifications.css" rel="stylesheet" type="text/css">
+    <script src="public/js/kit.fontawesome.js" crossorigin="anonymous"></script>
+    <title>CreditPro</title>
+</head>
+
+<body id="login">
+
+    <main>
+        <section id="includeImg">
+            <img src="public/img/IconcreditPro.png" alt="Logo de CreditPro">
+        </section>
+
+        <section id="includeForm">
+
+            <h1>¡Bienvenido!</h1>
+            <p>Por favor ingrese los datos</p>
+
+            <form action="#" method="POST">
+
+                <label for="email" id="labelEmail">Correo electrónico
+                    <br />
+                    <input type="email" name="email" id="email" required>
+                </label>
+
+                <label for="password" id="labelPassword">Contraseña
+                    <br />
+                    <input type="password" name="password" id="password" required>
+                    <i class="fa-regular fa-eye" id="eyeOpen" onclick="changeInput()"></i>
+                    <i class="fa-regular fa-eye-slash hide" id="eyeClose" onclick="changeInput()"></i>
+                </label>
+
+                <a href="views/recoveryPassword.html" id="recovery">¿Recuperar contraseña?</a>
+
+                <div id="Content-Buttons">
+                    <button type="button" onclick="redirect('views/home.html')">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        Ingresar
+                    </button>
+                </div>
+
+                <p>¿Usuario nuevo? <a href="views/createAccount.html">Registrarme</a></p>
+            </form>
+        </section>
+
+    </main>
+
+    <script type="text/javascript">
+        function changeInput() {
+            let inputCh = document.getElementById('password');
+            let eyeOpen = document.getElementById('eyeOpen');
+            let eyeClose = document.getElementById('eyeClose');
+            (inputCh.type == "text") ? (inputCh.type = "password") : (inputCh.type = "text")
+            eyeOpen.classList.toggle('hide');
+            eyeClose.classList.toggle('hide');
+        }
+    </script>
+
+</body>
+<script src="public/js/scripts.js" type="text/javascript"></script>
+
+</html>
